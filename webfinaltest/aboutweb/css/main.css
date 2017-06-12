@@ -1,0 +1,161 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+li{list-style: none;}
+a{display: block; width: 100%; text-decoration: none; color: #000;}
+/*---------------------------------*/
+header{width: 269px; height: 100%; position: fixed;}
+header h1{padding-left: 26px; margin-top: 25px; display: inline-block;}
+header h1 span:first-child{
+	display: inline-block;
+	color:#2d4839;
+	font-size: 34px;
+	line-height: 29px;
+	border-bottom: 2px solid #2d4839;
+	font-family: "YDIYGO360",sans-serif;
+}
+header h1 span:last-child{
+	display: block;
+	font-size: 20px;
+	text-indent: 7px;
+	color:#2d4839;
+	font-family: "YDIYGO320",sans-serif;
+}
+header nav{
+	padding: 0 19px 0 17px;
+	width: 233px;
+	position: absolute;
+	bottom: 0;
+	font-family: "APPLEGOTHIC",sans-serif;
+	font-size: 13px;
+}
+header nav ul{border-top: 1px solid #666564; padding: 13px 0 25px;}
+header nav ul li{margin-bottom: 9px; color: #9e9e9e; padding-left: 75px;}
+header nav ul li:first-child{width: 75px; float: left; color:#000; margin-bottom: 0; padding:0;}
+header nav ul li:nth-child(2){padding: 0; margin-bottom: 15px; color:#000;}
+
+section{padding-left: 269px; /*background-color: blue;*/}
+section #wrap{width: 802px; margin: 0 0 0 121px; background-color: white;}
+h2{padding:40px 0 40px 0; font-family: "YDIYGO360",sans-serif; font-size: 34px;}
+p{font-family: "YDIYGO310",sans-serif;line-height: 17px;}
+
+section .p1{}
+section .p1 h2{padding: 25px 0 40px 0;}
+section .p1 p{font-size: 13px; text-align: justify;}
+
+section .p2{}
+section .p2 h2{}
+section .p2 ul{}
+section .p2 ul li{}
+section .p2 ul li span{display: block;
+width:163px;
+height:163px;
+border:1px solid black;
+border-radius:100px;
+float: left;
+margin-right:40px;}
+section .p2 ul li #circleid{margin-right: 0;}
+section .p2 ul li span p{text-align: center; line-height: 163px;}
+
+section .p3{}
+section .p3 h2{clear:both;}
+section .p3 ul{}
+section .p3 ul li{margin: 40px 0;}
+section .p3 ul li:last-child{margin-bottom: 0px;}
+section .p3 ul li dl dt{font-size:0; color: transparent; text-indent: -9999px;}
+section .p3 ul li #icon_1{}
+section .p3 ul li #icon_1 dt{background: url('../images/icon_1.png') no-repeat;
+background-size: 80%;
+height: 146px; width: 153px; display: inline-block; float: left;
+}
+section .p3 ul li #icon_1 dd{font-size: 13px; text-align: justify;
+	padding: 0 0 0 0; margin: 0 0 0 75px; width: 570px; height: 146px; display: inline-block;font-family: "YDIYGO310",sans-serif;}
+
+section .p3 ul li #icon_2{}
+section .p3 ul li #icon_2 dt{background: url('../images/icon_2.png') no-repeat;
+background-size: 80%;
+height: 146px; width: 153px; display: inline-block; float: left;
+}
+section .p3 ul li #icon_2 dd{font-size: 13px; text-align: justify;
+	padding: 0 0 0 0; margin: 0 0 0 75px; width: 570px; height: 146px; display: inline-block;font-family: "YDIYGO310",sans-serif;}
+
+section .p3 ul li #icon_3{}
+section .p3 ul li #icon_3 dt{background: url('../images/icon_3.png') no-repeat;
+background-size: 80%;
+height: 155px; width: 153px; display: inline-block; float: left;
+}
+section .p3 ul li #icon_3 dd{font-size: 13px; text-align: justify;
+	padding: 0 0 0 0; margin: 0 0 0 75px; width: 570px; height: 146px; display: inline-block;font-family: "YDIYGO310",sans-serif;}
+
+section .p3 ul li #icon_4{}
+section .p3 ul li #icon_4 dt{background: url('../images/icon_4.png') no-repeat;
+background-size: 80%;
+height: 146px; width: 153px; display: inline-block; float: left;
+}
+section .p3 ul li #icon_4 dd{font-size: 13px; text-align: justify;
+	padding: 0 0 0 0; margin: 0 0 0 75px; width: 570px; height: 146px; display: inline-block;font-family: "YDIYGO310",sans-serif;}
+section .p3 ul li dl dd .icon320{font-family: "YDIYGO330",sans-serif;}
+section .p3 ul li .line{ padding: 0;}
+section .p3 ul .line div{width: 1px; height: 100px; background-color: #000; margin-left: 73px;}
+section .p3 ul li dl dd div{margin: 28px 0 0 0;}
+section .p4{}
+section .p4 h2{}
+section .p4 p{font-size: 13px; text-align: justify;}
+
+section .p5{}
+section .p5 h2{}
+section .p5 ul{}
+section .p5 ul li{float: left; margin-right: 75px;}
+	section .p5 ul li:last-child{margin-right: 0px;}
+section .p5 ul li dl{}
+section .p5 ul li dl dt{font-size:0; color: transparent; text-indent: -9999px;}
+	section .p5 ul li #browserid1{background: url('../images/chrome.png') no-repeat; width: 100px; height: 100px; display: inline-block;}
+	section .p5 ul li #browserid2{background: url('../images/opera.png') no-repeat; width: 100px; height: 100px; display: inline-block;}
+	section .p5 ul li #browserid3{background: url('../images/explorer.png') no-repeat; width: 100px; height: 100px; display: inline-block;}
+	section .p5 ul li #browserid4{background: url('../images/safari.png') no-repeat; width: 100px; height: 100px; display: inline-block;}
+	section .p5 ul li #browserid5{background: url('../images/firefox.png') no-repeat; width: 100px; height: 100px; display: inline-block;}
+
+section .p5 ul li dl dd{font-family: "YDIYGO320",sans-serif; text-align: center; padding: 120px 0 0 0;}
+section .p5 p{font-size: 13px; float: left; width: 376px; text-align: justify; display: inline-block;
+	padding:40px 0 25px 0;}
+section .p5 #bp2{margin-left: 50px;}

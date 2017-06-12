@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>21661111전다인</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style media="screen">html{overflow-x: hidden;}</style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+      $(window).resize(function(){
+        lengthCTL($listnum, $listlength);
+      })
+      $(document).ready(function() {
+        $listnum = 0;
+        $listlength =$(".listwrap li").length;
+        $('.listwrap').css('width', (414*$listlength));
+        $listlength = $listlength-1;
+
+        lengthCTL($listnum, $listlength);
+        btnCTL($listnum, $listlength);
+
+        $('#porfolio > a').click(function(){
+          if($(this).hasClass('btn-prev')){
+            $listnum--;
+          }else{
+            $listnum++;
+          }
+          btnCTL($listnum, $listlength);
+        });
+
+        $('.btn-prev').click(function() {
+          $listnum--;
+          btnCTL($listnum, $listlength);
+        });
+
+        $('.btn-next').click(function() {
+          $listnum++;
+          btnCTL($listnum, $listlength);
+        });
+
+        var $slideBtn =$('.circles li a');
+        $slideBtn.click(function(){
+          var index = $slideBtn.index(this);
+          $slideBtn.removeClass('select');
+          $(this).addClass('select')
+          if (index == 0) {
+            $('#box > div').stop().animate({marginTop:'0'}, 200);
+          }else if (index == 1) {
+            $('#box > div').stop().animate({marginTop:'-620px'}, 200);
+          }else if (index == 2){
+            $('#box > div').stop().animate({marginTop:'-1240px'}, 200);
+          }
+        });
+      })
+
+      $lastnum = 0;
+      $currentNum = 0;
+
+      function lengthCTL(l1, l2){
+          var windowWidth = $(window).width();
+          var cardNumber = Math.floor(windowWidth/414);
+          $lastnum = cardNumber - 1;
+          if($lastnum !== $currentNum){
+            btnCTL(l1, l2);
+          }
+          $currentNum = $lastnum;
+      }
+
+      function btnCTL(l1, l2){
+        if(l1 == 0){
+          $('.btn-prev').css('display', 'none');
+          $('.btn-next').css('display', 'block');
+        }else if(l1 == (l2-$lastnum)){
+          $('.btn-prev').css('display', 'block');
+          $('.btn-next').css('display', 'none');
+        }else{
+          $('.btn-prev').css('display', 'block');
+          $('.btn-next').css('display', 'block');
+        }
+        $('.listwrap').stop().animate({'left': (-414*l1) + 'px'})
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <h1 class="logo"><a href="#">LOGO</a></h1>
+        <span id="menu"><a href="#">MENU</a></span>
+      </div>
+
+      <h2>CLOSER
+        <span class="line"></span>
+      </h2>
+
+      <span id="design">#DESIGN</span>
+      <span id="lead"></span>
+      <p>
+        LEAD GRAPHIC DESIGNER
+      </p>
+    </header>
+    <section>
+      <article id="about">
+        <div class="wrap">
+          <h3>
+            <img src="images/arr2.png" alt ="arrow" />
+            #ABOUT ME
+            <span class="line"></span>
+          </h3>
+          <dl>
+            <dt><img src="images/main1.jpg" alt="main" />
+              <ul>
+                <li><a href="#" target="_blank" id="tw">twitter</a></li>
+                <li><a href="#" target="_blank" id="pin">pinterest</a></li>
+                <li><a href="#" target="_blank" id="un">untitled1</a></li>
+                <li><a href="#" target="_blank" id="vi">vimeo</a></li>
+                <li><a href="#" target="_blank" id="un2">untitled2</a></li>
+              </ul>
+            </dt>
+            <dd>
+                Closer is a free portfolio webpage designed by Stephen Kay.
+                Closer is designed to engage, intrigue and attract interest.
+                Lorem ipsum dolor sit amet, consectetur adipisic elit, sed doeiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in repderit. in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint ccaecat. cupidatat non proident, sunt in culpa qui officia
+            </dd>
+          </dl>
+        </div>
+      </article>
+      <article id="portfolio">
+        <div>
+          <h3>#PORTFOLIO</h3>
+          <span class="line"></span>
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+            sed quia consequuntur magin dolores eos qui ratione voluptatem sequi nescinut.
+            Neque porro quisquam est.
+          </p>
+          <ul class="listwrap">
+            <li>
+              <img src="images/project1.jpg" alt="project-img" />
+              <dl>
+                <dt>PROJECT</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                sed quia consequuntur.
+                </dd>
+                </dl>
+            </li>
+            <li>
+              <img src="images/project2.jpg" alt="project-img" />
+              <dl>
+                <dt>PROJECT</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                sed quia consequuntur.
+                </dd>
+                </dl>
+            </li>
+            <li><img src="images/project3.jpg" alt="project-img" />
+              <dl>
+                <dt>PROJECT</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                sed quia consequuntur.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <img src="images/project1.jpg" alt="project-img" />
+              <dl>
+                <dt>PROJECT</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                sed quia consequuntur.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <img src="images/project2.jpg" alt="project-img" />
+              <dl>
+                <dt>PROJECT</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                sed quia consequuntur.
+                </dd>
+                </dl>
+            </li>
+            <li><img src="images/project3.jpg" alt="project-img" />
+              <dl>
+                <dt>PROJECT</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                sed quia consequuntur.
+                </dd>
+                </dl>
+            </li>
+            <li>
+              <img src="images/project1.jpg" alt="project-img" />
+              <dl>
+                <dt>PROJECT</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                sed quia consequuntur.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <img src="images/project2.jpg" alt="project-img" />
+              <dl>
+                <dt>PROJECT</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                sed quia consequuntur.
+                </dd>
+                </dl>
+            </li>
+            <li><img src="images/project3.jpg" alt="project-img" />
+              <dl>
+                <dt>PROJECT</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                sed quia consequuntur.
+                </dd>
+                </dl>
+            </li>
+          </ul>
+
+          <a class="btn-prev"><span>PREV</span></a>
+          <a class="btn-next"><span>NEXT</span></a>
+          </div>
+      </article>
+      <article id="social">
+        <div class="wrap">
+          <h3>
+            #SOCIAL MEDIA
+            <span class="line"></span>
+          </h3>
+          <dl id="socialicon">
+            <dd><a href="#" target="blank" id="twa">twitter</a></dd>
+            <dd><a href="#" target="blank" id="pia">pinterest</a></dd>
+            <dd><a href="#" target="blank" id="una">untitled1</a></dd>
+            <dd><a href="#" target="blank" id="via">vimeo</a></dd>
+            <dd><a href="#" target="blank" id="un2a">untitled2</a></dd>
+          </dl>
+          <ul id="box">
+            <div class="boxwrap">
+            <li>
+              <dl>
+                <dt>8:30AM</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur.
+                </dd>
+                <dd>01/09/2016</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>10:30AM</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur.
+                </dd>
+                <dd>16/08/2016</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>7:23PM</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur.
+                </dd>
+                <dd>08/08/2016</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>2:03PM</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur.
+                </dd>
+                <dd>26/07/2016</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>8:30AM</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur.
+                </dd>
+                <dd>01/09/2016</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>10:30AM</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur.
+                </dd>
+                <dd>16/08/2016</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>7:23PM</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur.
+                </dd>
+                <dd>08/08/2016</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>2:03PM</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur.
+                </dd>
+                <dd>26/07/2016</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>8:30AM</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur.
+                </dd>
+                <dd>01/09/2016</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>10:30AM</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur.
+                </dd>
+                <dd>16/08/2016</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>7:23PM</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur.
+                </dd>
+                <dd>08/08/2016</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>2:03PM</dt>
+                <dd>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur.
+                </dd>
+                <dd>26/07/2016</dd>
+              </dl>
+            </li>
+          </div>
+          </ul>
+          <ul class="circles">
+            <li><a class="select"></a></li>
+            <li><a></a></li>
+            <li><a></a></li>
+          </ul>
+        </div>
+      </article>
+      <article id="skills">
+        <div class="wrap">
+          <div id="redbox1"></div>
+          <h3>#SKILLS</h3>
+          <ul>
+            <li>
+              Design<br />
+              <img src="images/skills1.png" alt="8점">
+            </li>
+            <li>
+              Concept Development<br />
+              <img src="images/skills2.png" alt="9점">
+            </li>
+            <li>
+              Content<br />
+              <img src="images/skills3.png" alt="7점">
+            </li>
+          </ul>
+          <div id="redbox2"></div>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <h3>#A LITTLE BIT MORE</h3>
+      <span class="line"></span>
+      <p>
+        ser is a free portfolio webpage designer by Stephen Kay.
+         Closer is designed to engage, intuigue and attract inte
+         rest. Lorem ipsum dolor sit amet, consectetur adipisic
+          elit, sed doeiusmo d tempor incididunt ut labore et
+           dolore magna aliqua.
+      </p>
+      <div id="thankyou">THANK YOU</div>
+    </footer>
+  </body>
+</html>

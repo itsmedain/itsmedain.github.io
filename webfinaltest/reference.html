@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>전다인ref</title>
+    <link rel="stylesheet" href="./css/ref.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            BoxRePosition();
+        })
+        $(window).resize(function(){
+            BoxRePosition();
+        })
+        $(window).load(function(){
+            BoxRePosition();
+        })
+        function BoxRePosition(){
+            var windowWidth = $(window).width();
+            var windowHeight = $(window).height();
+            var boxWidth = $('#box').width();
+            var boxHeight = $('#box').height();
+
+            $('#box').css('left', (windowWidth - boxWidth)/2);
+            $('#box').css('top', (windowHeight - boxHeight)/2);
+        }
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+            document.getElementById("main").style.marginLeft ="0";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div id="textbox">
+        <a href="./index.html">about</a>
+        <a href="./finaltest.html">work</a>
+        <a href="./reference.html">reference</a>
+        <a href="./contact.html">contact</a>
+      </div>
+    </div>
+
+    <div id="main">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+    <article class="article">
+      <section id="s1">
+        <h1>Reference</h1>
+      </section>
+      <section id="s2">
+        <ul >
+          <li>
+            <a href="http://www.cssdesignawards.com/sites/super16/29701/">
+            <dl class="info">
+              <dt>2017.06.11</dt>
+              <dd>Super16</dd>
+              <dd>Website for the non-traditional film school, Super16. Check out their incredible films and history!
+              </dd>
+            </dl>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.cssdesignawards.com/sites/endless-night/30296/">
+            <dl class="info">
+              <dt>2017.06.12</dt>
+              <dd>ndless Night</dd>
+              <dd>Proud to share the behind the scenes of "Endless Night" music video.
+              </dd>
+            </dl>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.cssdesignawards.com/sites/rmagazine/30710/">
+            <dl class="info">
+              <dt>2017.06.13</dt>
+              <dd>Rmagazine</dd>
+              <dd>Rmagazine is a lifestyle digital magazine entirely directed by ROLA, one of Japanese biggest celebrities.
+              </dd>
+            </dl>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.cssdesignawards.com/sites/practicalvr-experience/30725/">
+            <dl class="info">
+              <dt>2017.06.14</dt>
+              <dd>PracticalVR Experience</dd>
+              <dd>Discover PracticalVR's website to enjoy and learn more about tomorrow's mixed reality tools
+              </dd>
+            </dl>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.cssdesignawards.com/sites/la-ferme-de-sohan/30767/">
+            <dl class="info">
+              <dt>2017.06.15</dt>
+              <dd>La Ferme de Sohan</dd>
+              <dd>Bio Sohan is a one-of-a-kind farm with a profound respect for animals welfare that deserves an immersive and peaceful website.
+              </dd>
+            </dl>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.cssdesignawards.com/sites/amaio-swim/30824/">
+            <dl class="info">
+              <dt>2017.06.16</dt>
+              <dd>Amaiò Swim</dd>
+              <dd>Amaiò is a swimwear line born in L.A., with a mission to bring couture fashion pool-side and resort wear to the street.
+              </dd>
+            </dl>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </body>
+</html>

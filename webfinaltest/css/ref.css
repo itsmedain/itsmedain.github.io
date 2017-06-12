@@ -1,0 +1,98 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+li{list-style: none;}
+a{display: block; width: 100%; text-decoration: none; color: #000;}
+/*---------------------------------*/
+@font-face {
+  font-family: 'DINBla';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/DINBla.ttf);
+  src: url(../font/DINBla.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DINLig';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/DINLig.ttf);
+  src: url(../font/DINLig.ttf) format('truetype');
+}
+body, html, article{height: 100%;}
+body{font-family: DINLig;}
+#s1{left: 0;
+    top: 0;
+    width: 500px;
+    height: 100%;
+  /*background-color: blue;*/
+position: fixed;}
+#s1 h1{font-family: DINBla; font-size: 60px; color: red;
+width: 272px; position: absolute; top: 50%; left: 50%; margin-left: -136px; margin-top: -36px;}
+
+#s2{
+    height: 100%;
+  /*background-color: yellow;*/
+padding-left: 500px;}
+#s2 ul{float: right; display: inline-block;
+position: absolute; top: 50%; margin-top: -352px;}
+#s2 ul li{
+  text-align: center;
+  list-style: none;
+  width: 250px; height:250px;
+  float: left;
+  margin: 50px;
+  background-color: #e7e7e7;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.57);
+  border-radius: 5px;
+}
+#s2 ul li:nth-child(1):hover{background: url('../images/r1.jpg');no-repeat; background-size: cover;}
+#s2 ul li:nth-child(2):hover{background: url('../images/r2.jpg');no-repeat; background-size: cover;}
+#s2 ul li:nth-child(3):hover{background: url('../images/r3.jpg');no-repeat; background-size: cover;}
+#s2 ul li:nth-child(4):hover{background: url('../images/r4.jpg');no-repeat; background-size: cover;}
+#s2 ul li:nth-child(5):hover{background: url('../images/r5.jpg');no-repeat; background-size: cover;}
+#s2 ul li:nth-child(6):hover{background: url('../images/r6.jpg');no-repeat; background-size: cover;}
+
+#s2 ul li dl.info{margin-top: 20px;}
+#s2 ul li dl dt{padding-bottom: 20px;}
+#s2 ul li dl dd{padding-top: 30px; margin: 0 30px;}

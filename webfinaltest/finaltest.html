@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>전다인index</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            BoxRePosition();
+        })
+        $(window).resize(function(){
+            BoxRePosition();
+        })
+        $(window).load(function(){
+            BoxRePosition();
+        })
+        function BoxRePosition(){
+            var windowWidth = $(window).width();
+            var windowHeight = $(window).height();
+            var boxWidth = $('#box').width();
+            var boxHeight = $('#box').height();
+
+            $('#box').css('left', (windowWidth - boxWidth)/2);
+            $('#box').css('top', (windowHeight - boxHeight)/2);
+        }
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+            document.getElementById("main").style.marginLeft ="0";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+        function myFunction() {
+              window.open("./closer/index.html");
+          }
+        function myFunction2() {
+              window.open("./time/local/index.html");
+          }
+        function myFunction3() {
+              window.open("./aboutweb/index.html");
+          }
+    </script>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div id="textbox">
+        <a href="./index.html">about</a>
+        <a href="./finaltest.html">work</a>
+        <a href="./reference.html">reference</a>
+        <a href="./contact.html">contact</a>
+      </div>
+    </div>
+
+    <div id="main">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+    <article class="article">
+      <section id="s1">
+        <h1>work</h1>
+      </section>
+      <section id="s2">
+        <div>
+          <ul class="listwrap">
+            <li>
+              <span>01</span>
+              <dl class="info">
+                <dt>2017.06.11</dt>
+                <dd>CLOSER</dd>
+                <dd><div class="box"><span onclick="myFunction()">CLOSER</span>
+                </div></dd>
+                <dd>click and check it!<br />
+                    This page is about "CLOSER"<br />
+                    웹퍼블리싱수업실습에 했던 과제물이다.
+                </dd>
+            </li>
+            <li>
+              <span>02</span>
+              <dl class="info">
+                <dt>2017.06.11</dt>
+                <dd>TIME with javascript</dd>
+                <dd><div class="box"><span onclick="myFunction2()">TIME</span>
+                </div></dd>
+                <dd>click and check it!<br />
+                    This page is about time.<br />
+                    자바스크립트를 사용한 시계만들기.
+                </dd>
+            </li>
+            <li>
+              <span>03</span>
+              <dl class="info">
+                <dt>2017.06.11</dt>
+                <dd>WEB</dd>
+                <dd><div class="box"><span onclick="myFunction3()">WEB</span>
+                </div></dd>
+                <dd>click and check it!<br />
+                    this page is about web.<br />
+                    팀과제로 진행했던 웹에대한 페이지.
+                </dd>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>
